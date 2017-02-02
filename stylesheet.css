@@ -1,0 +1,124 @@
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.topnav li {
+  float: left;
+}
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+ul.topnav li a:hover {
+  background-color: #555;
+}
+
+ul.topnav li.icon {
+  display: none;
+}
+
+body {
+  margin: 0px;
+}
+body,span {
+  font-family: Verdana;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: top;
+  background-image: url('images/streetview.jpeg');
+  background-size: cover;
+  height: 800px;
+}
+
+.jumbotron h1 {
+  font-size: 140px;
+}
+
+.jumbotron p {
+  font-size: 25px;
+}
+
+#disp {
+  display: inline;
+  margin-left: -25px;
+  height: 30px;
+} 
+
+.col-sm-1 {
+  margin-right: 20px;
+}
+
+h4 {
+  padding-bottom: 30px;
+}
+
+span {
+  font-weight: bold;
+}
+
+#fontcol {
+  color: #000000;
+  background-color: #cccccc;
+}
+
+#add {
+  padding-left: 25px;
+  padding-bottom: 50px;
+}
+
+textarea {
+  font-weight: bold;
+  color: #b3b3b3;
+}
+
+#hear-about {
+  color: #666666;
+  border-radius: 8px;
+}
+
+footer {
+  padding-top: 120px;
+  height: 180px;
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {
+    position: relative;
+  }
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
