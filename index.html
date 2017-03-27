@@ -5,18 +5,19 @@
     <title>Form by David Koskinen-Hughes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
   </head>
   <body>
 
     <header>
       <ul class="topnav" id="myTopnav">
-        <li><a href="#home" class="glyphicon glyphicon-home"></a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#news">About</a></li>
         <li><a href="#contact">Team</a></li>
         <li><a href="#about">Contact</a></li>
         <li class="icon">
-        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+        <a href="javascript:void(0);" onclick="navEvent()">&#9776;</a>
         </li>
       </ul>
     </header>
@@ -25,7 +26,7 @@
       <div class="container">
         <div class="row text-left">
          <h1>CONTACT US</h1>
-         <p>We Will Appriciate This Very Much...</p> 
+         <p>We would appriciate this very much...</p> 
         </div>
       </div>
     </section>
@@ -35,42 +36,53 @@
           <div class="col-xs-6 col-md-4">
             <h4 class="glyphicon glyphicon-map-marker"><span> ADDRESS</span></h4>
             <p id="add">Aninkaistenkatu 7A 30<br />20100 Turku<br />Finland</p>
-              <div class="col-sm-8">
-                <div class="col-sm-1"><a href="#"><img id="disp" src="images/1481906561_facebook_online_social_media.png"></a></div>
-                <div class="col-sm-1"><a href="#"><img id="disp" src="images/1481906618_online_social_media_twitter.png"></a></div>
-                <div class="col-sm-1"><a href="#"><img id="disp" src="images/1481906628_instagram_online_social_media.png"></a></div>
-                <div class="col-sm-1"><a href="#"><img id="disp" src="images/1481906671_google_plus_online_social_media.png"></a></div>
+              <div>
+                <a href="#"><img id="disp" src="images/1481906561_facebook_online_social_media.png"></a>
+                <a href="#"><img id="disp" src="images/1481906618_online_social_media_twitter.png"></a>
+                <a href="#"><img id="disp" src="images/1481906628_instagram_online_social_media.png"></a>
+                <a href="#"><img id="disp" src="images/1481906671_google_plus_online_social_media.png"></a>
               </div>
           </div>
+          
 
+          <!-- Form Starts Here --> 
           <div class="col-xs-12 col-md-8">
-            <form action="http://www.example.com/review.php" method="get">
+            <form name="myForm" method="post" action="#" onsubmit="return validate();" novalidate>
               <fieldset>
-                <label><input type="text" name="name" size="30" maxlength="100" placeholder="Enter Name" id="fontcol"></label><br />
-                <label><input type="email" name="email" size="30" maxlength="100" placeholder="Enter Email" id="fontcol"></label><br />
+                <!-- Name -->
+                <label><input id="Name" class="texcol" type="text" name="name" size="30" maxlength="50" placeholder="Enter your name"></label><span id="nameloc" style="font-size:18px" class="fa"></span><br />
+                <!-- Email -->
+                <label><input id="Email" class="texcol" type="email" name="email" size="30" maxlength="100" placeholder="you@example.com"></label><span id="emailoc" style="font-size:18px" class="fa"></span><br />
               </fieldset><br />
 
               <fieldset>
                 <p>
+                  <!-- Comments -->
                   <label for="comments"></label><br />
-                  <textarea rows="4" cols="40" id="fontcol" placeholder="Write Your Comments Here"></textarea>
+                  <textarea id="Comments" class="texcol" name="comments"  rows="5" cols="30" placeholder="Write your comments here (Max 200 charactors)"></textarea>
                 </p>
 
                 <p>
-                  <label for="hear-about">How Did You Hear About Us?</label>
-                  <select name="referrer" id="hear-about">
+                  <!-- Referrer -->
+                  <label for="referrer">How did you hear about us? </label>
+                  <select id="Referrer" name="referrer">
+                  <option value=""></option>
                   <option value="google">Google</option>
                   <option value="friend">Friend</option>
                   <option value="advert">Advert</option>
                   <option value="other">Other</option>
-                  </select>
+                  </select> <span id="referrerloc" style="font-size:18px" class="fa"></span>
                 </p>
-
-                <label><input type="checkbox" name="subscribe" checked="checked" /> Subscribe To Our Newsletter</label><br />
-                <input type="submit" value="Send" id="hear-about" />
+                
+                <!-- Submit -->
+                <label><input type="checkbox" name="Subscribe" checked="checked" /> Subscribe to our newsletter</label><br />
+                <input class="subMit" type="submit" value="Submit">
               </fieldset>
             </form>
           </div>
+          <!-- Form Ends Here -->
+
+
         </div>
       </section>
   
@@ -79,15 +91,8 @@
         <p>&copy 2016 David Koskinen-Hughes</p>
       </footer>
 
-    <script>function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>   
+    <script src="js/navevent.js"></script>   
+    <script src="js/validate.js"></script>
 
   </body>
 </html>

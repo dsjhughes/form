@@ -53,7 +53,7 @@ body,span {
 
 #disp {
   display: inline;
-  margin-left: -25px;
+  margin: 0 10px 20px 0;
   height: 30px;
 } 
 
@@ -65,13 +65,8 @@ h4 {
   padding-bottom: 30px;
 }
 
-span {
-  font-weight: bold;
-}
-
-#fontcol {
-  color: #000000;
-  background-color: #cccccc;
+.texcol {
+  color: black;
 }
 
 #add {
@@ -80,12 +75,19 @@ span {
 }
 
 textarea {
-  font-weight: bold;
   color: #b3b3b3;
 }
 
-#hear-about {
-  color: #666666;
+label {
+  font-weight: normal;
+}
+select {
+  color: #b3b3b3;
+}
+
+.subMit {
+  background: #b3b3b3;
+  color: #ffffff;
   border-radius: 8px;
 }
 
@@ -93,8 +95,49 @@ footer {
   padding-top: 120px;
   height: 180px;
 }
+@media screen and (max-width:960px) {
+  .jumbotron h1 {
+  font-size: 80px;
+  }
+  .jumbotron p {
+  font-size: 18px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  #disp {
+  display: inline;
+  margin: 0 10px 30px 0;
+  height: 20px;
+  } 
+  .jumbotron {
+  height: 600px;
+  }
+  .jumbotron h1 {
+  font-size: 80px;
+  }
+
+  .jumbotron p {
+  font-size: 14px;
+  }
+}
 
 @media screen and (max-width:680px) {
+  #disp {
+  display: inline;
+  margin: 0 10px 30px 0;
+  height: 20px;
+  } 
+  .jumbotron {
+  height: 300px;
+  }
+  .jumbotron h1 {
+  font-size: 60px;
+  }
+
+  .jumbotron p {
+  font-size: 14px;
+  }
   ul.topnav li:not(:first-child) {
     display: none;
   }
@@ -121,4 +164,5 @@ footer {
     display: block;
     text-align: left;
   }
+
 }
